@@ -4,7 +4,9 @@
       <el-header class="sys-header">一张图项目系统</el-header>
       <el-container clss="app-Content-Pannel">
         <el-aside width="200px" class="sys-menu">左侧菜单</el-aside>
-        <el-main>地图区域</el-main>
+        <el-main class="sys-main">
+          <Mapview />
+        </el-main>
       </el-container>
     </el-container>
 
@@ -12,11 +14,12 @@
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue' 不用了（4.项目需求）
-
+import Mapview from './components/common/Mapview.vue';
 export default {
   name: 'App',
-  components: {}
+  components: {
+    Mapview,
+  },
 }
 </script>
 
@@ -44,5 +47,9 @@ body,
 
 .sys-menu {
   background-color: #C0C4CC;
+}
+
+.sys-main {
+  padding: 5px !important;
 }
 </style>
